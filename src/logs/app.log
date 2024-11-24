@@ -1,0 +1,17 @@
+2024-11-24 20:27:21.594 | INFO     | __main__:main:23 - running the application...
+2024-11-24 20:27:21.595 | INFO     | model.model_service:load_model:54 - checking existance of model config file at model\models/rf_db_v1
+2024-11-24 20:27:21.595 | WARNING  | model.model_service:load_model:60 - model at model\models/rf_db_v1 was not found -> building model rf_db_v1
+2024-11-24 20:27:21.595 | INFO     | model.pipeline.model:build_model:34 - starting up model building pipeline
+2024-11-24 20:27:21.595 | INFO     | model.pipeline.preparation:prepare_data:22 - starting up preprocessing pipeline
+2024-11-24 20:27:21.595 | INFO     | model.pipeline.collection:load_data_from_db:36 - Reading in data from db
+2024-11-24 20:27:21.605 | INFO     | model.pipeline.preparation:_encode_cat_cols:48 - encoding categorical columns: ['balcony', 'storage', 'parking', 'furnished', 'garage']
+2024-11-24 20:27:21.608 | INFO     | model.pipeline.preparation:parse_garden_col:66 - parsing garden column
+2024-11-24 20:27:21.608 | INFO     | model.pipeline.model:_get_x_y:83 - defining X and Y variables. X vars: ['area', 'constraction_year', 'bedrooms', 'garden', 'balcony_yes', 'parking_yes', 'furnished_yes', 'garage_yes', 'storage_yes']; y var: rent
+2024-11-24 20:27:21.609 | INFO     | model.pipeline.model:_split_train_test:101 - splitting data into train and test sets
+2024-11-24 20:27:21.610 | INFO     | model.pipeline.model:_train_model:123 - training a model with hyperparameters
+2024-11-24 20:27:21.610 | DEBUG    | model.pipeline.model:_train_model:129 - grid_space = {'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2024-11-24 20:27:37.494 | INFO     | model.pipeline.model:_evaluate_model:163 - evaluating model performance. SCORE=0.7704361806205545
+2024-11-24 20:27:37.495 | INFO     | model.pipeline.model:_save_model:178 - saving a model to a directory: model\models/rf_db_v1
+2024-11-24 20:27:37.503 | INFO     | model.model_service:load_model:65 - model rf_db_v1 exists. -> loading model
+2024-11-24 20:27:37.510 | INFO     | model.model_service:predict:80 - making prediction!
+2024-11-24 20:27:37.513 | INFO     | __main__:main:39 - prediction = [2015.84532828]

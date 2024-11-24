@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ml-in-production"
+version = "0.1.0"
+description = ""
+authors = ["Benedikt Lugauer <benedikt.lugauer@pm.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+loguru = "^0.7.2"
+pydantic = "^2.10.1"
+sqlalchemy = "^2.0.36"
+pydantic-settings = "^2.6.1"
+pandas = "^2.2.3"
+scikit-learn = "^1.5.2"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
