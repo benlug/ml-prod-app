@@ -30,9 +30,7 @@ jobs:
         python-version: 3.12
 
     - name: Install poetry
-      run: |
-        pip install poetry
-        export POETRY_HOME="${HOME}/.poetry"
+      run: snok/install-poetry@v1
 
     - name: Install dependencies
       run: poetry run make install
